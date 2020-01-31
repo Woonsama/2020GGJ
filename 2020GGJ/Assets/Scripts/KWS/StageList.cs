@@ -20,4 +20,16 @@ public class StageList : MonoBehaviour
     {
 
     }
+
+    public IEnumerator StageManagement()
+    {
+        int count = 0;
+
+        foreach (var list in stageList)
+        {
+            count++;
+        }
+
+        yield return 0;
+    }
 }
