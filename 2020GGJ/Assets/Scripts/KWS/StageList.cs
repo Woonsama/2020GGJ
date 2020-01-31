@@ -10,6 +10,7 @@ public class Stage
     public GameObject stageUI;
     public int stageNum;
     public bool isStageLocked;
+    public bool isCleared;
 }
 
 public class StageList : MonoBehaviour
@@ -19,16 +20,20 @@ public class StageList : MonoBehaviour
     void Update()
     {
 
+        //Stage Manager
+        StartCoroutine(StageManagement());
     }
 
     public IEnumerator StageManagement()
     {
-        int count = 0;
-
-        foreach (var list in stageList)
+        for (int value = 0; value <= stageList.Length - 1; value++)
         {
-            count++;
+            if(stageList[value].isCleared)
+            {
+                stageList[value + 1].isStageLocked = true;
+            }
         }
+
 
         yield return 0;
     }
