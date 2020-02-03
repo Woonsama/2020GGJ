@@ -1,6 +1,6 @@
 # 2020 Global Game Jam Busan
 
-## Orgaorganization
+## Organization
 
 ### Programmer : 2
 ### Designer : 1
